@@ -1,4 +1,5 @@
 ﻿  WordCount.c
+C:\Users\gwsk\Desktop\现代软件工程\实验一\WordCount\WordCount\WordCount.c(14,1): warning C4047: “初始化”:“char”与“char [1]”的间接级别不同
   正在生成代码
   1 of 4 functions (25.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation

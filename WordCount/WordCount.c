@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
     char buffer[1003];
     int bufferLen;
     int c = 0, w = 0;//c为字符数，w为单词数，
-    char z;
+    char z = "";
     if ((fp = fopen(argv[2], "rb")) == NULL) {//检查文件是否打开成功
         perror(argv[2]);
         return NULL;
@@ -31,9 +31,9 @@ int main(int argc, char* argv[])
                 --c;
             }
         }
+        if (z == ',' || z == ' ' || z == '，')//每行如果是以“，”、空格结尾，字符数要减1
+            --w;
     }
-    if (z != '，' && z != ',' && z != ' ')//如果不是以”，“、空格结尾，字符数要加1
-        ++w;
     if (!strcmp(argv[1], &("-c")))//根据输入-c还是-w来输出字符数还是单词数
         printf("字符数：%d", c);
     if (!strcmp(argv[1], &("-w")))
